@@ -12,10 +12,10 @@ model.fit(x_training, y_training, epochs=10, batch_size=32)
 
 #defining the datasets
 
-nht = north_hand_train	#each data vector is 27 dimensions (hcp + 16 face cards + 4 suit lengths + 6 for bids made)
-sht = south_hand_train	#each data vector is 27 dimensions (hcp + 16 face cards + 4 suit lengths + 6 for bids made)
-y = output	#this is the double dummy score for each hand that has been dealt
-
+'''
+nht (north_hand_train)	#each data vector is 27 dimensions (hcp + 16 face cards + 4 suit lengths + 6 for bids made)
+sht (south_hand_train)	#each data vector is 27 dimensions (hcp + 16 face cards + 4 suit lengths + 6 for bids made)
+'''
 
 #defining the model
 
