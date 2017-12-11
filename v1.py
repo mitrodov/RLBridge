@@ -17,6 +17,27 @@ nht (north_hand_train)	#each data vector is 27 dimensions (hcp + 16 face cards +
 sht (south_hand_train)	#each data vector is 27 dimensions (hcp + 16 face cards + 4 suit lengths + 6 for bids made)
 '''
 
+
+def bandit(someinputarray, epsilon):
+	l = random.uniform(0,1)
+	if (l>epsilon):
+		output max(someinputarray)
+	else:
+		probable = random.choice(someinputarray)
+		if (probable != max(someinputarray)):
+			output probable
+		else:
+			break
+
+def update(hand, list_one, list_two):
+	for i in range (0, 27):
+		if (list_one[i] = 0):
+			list_one[i] = hand
+			list_two[i] = hand
+
+	output (list_one, list_two)
+
+
 #defining the model
 
 model = Sequential()
@@ -35,24 +56,6 @@ for row in inputnumpyarray:
 	hand = bandit(prediction, epsilon)	
 	create = create.append(update(hand, nht, sht))	#update changes the entries (nht, sht will all have to be modulo 6)
 
-def bandit(someinputarray, epsilon):
-	l = random.uniform(0,1)
-	if (l>epsilon):
-		output max(someinputarray)
-	else:
-		probable = random.choice(someinputarray)
-		if (probable != max(someinputarray)):
-			output probable
-		else:
-			break
-
-def update(hand, arrey, yaar):
-	for i in range (0, 27):
-		if (arrey[i] = 0):
-			arrey[i] = hand
-			yaar[i] = hand
-
-	output (arrey, yaar)
 
 model.fit(create, scoring , epochs=whatever, batch_size=32)
 score = model.evaluate(...)
