@@ -60,21 +60,3 @@ for row in inputnumpyarray:
 model.fit(create, scoring , epochs=whatever, batch_size=32)
 score = model.evaluate(...)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
