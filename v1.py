@@ -5,7 +5,6 @@ from keras.layers import Dense, Activation, Dropout
 from keras import optimizers
 import random
 
-model.fit(x_training, y_training, epochs=10, batch_size=32)
 
 
 #(hcp, ace, king, queen, jack (spades, hearts, diamonds, clubs), length, 1,2,3,4,5,6)
